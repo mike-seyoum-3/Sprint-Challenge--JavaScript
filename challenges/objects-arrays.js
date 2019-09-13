@@ -15,20 +15,70 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+const dinosaurs = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: 7000,
+  length: 12,
+  period: "late cretaceous",
+  obJName: function () {
+    return "dinosaurs living creation"
+  }
+};
 
 // What was the diet of a velociraptor?
-console.log();
-
+const objName = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: 15,
+  length: 1.8,
+  period: "late cretaceous",
+  objName: function () {
+    return "dinosaurs living creation"
+  }
+};
+console.log(dinosaurs.name,dinosaurs.diet);
 // How long was a stegosaurus?
-console.log();
+let objCreation = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: 2000,
+  length: 9,
+  period: "late cretaceous",
+  objName: function () {
+    return "dinosaurs living creation"
+  }
+
+};
+console.log(dinosaurs.name,dinosaurs.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+const dinosaurs = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: 7000,
+  length: 12,
+  period: "late Cretaceous",
+  obJName: function () {
+    return "dinosaurs living creation"
+  }
+};
+console.log(dinosaurs.name,dinosaurs.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+const dinosaurs = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: 7000,
+  length: 12,
+  period: "late cretaceous",
+  speak: "roar",
+  objName: function () {
+    return "RAWERSRARARWERSARARARRRR!"
+  }
+};
+console.log(dinosaurs.name,dinosaurs.speak);
 
 
 // ==== Arrays ====
@@ -52,6 +102,11 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+graduates.forEach(() => {
+  universities.push(names.university);
+  return universities.sort();
+}
+)
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -60,11 +115,24 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
+const contactInfo = graduates.length;
+console.log(contactInfo)
+console.log(`${graduates[contactInfo].first_name} ${graduates[contactInfo].email}`);
+
 const contactInfo = [];
+graduates.forEach(function (info) {
+  contactInfo.push(info.first_name + ' ' + info.email);
+
+})
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+for (i = 0; i < graduates.length; i++){
+  if (graduates[i].university.includes("uni")) {
+    uni.push(graduates[i].university)
+  }
+}
 console.log(unisWithUni);
 
 
@@ -90,8 +158,14 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
-console.log(displayNames);
+// const displayNames = [];
+// console.log(displayNames);
+const animalNames = [];
+
+zooAnimals.forEach((animalName) => {
+  animalNames.push(`Name: ${aniName.animal_name}` Scientific: ${aniNAme.scientific_name})
+}
+console.log(animalNames);
 
 /* Request 2: .map()
 

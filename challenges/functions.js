@@ -6,6 +6,11 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+const consume = [3, 4, 5];
+const arr2 = consume.map(function(item) {
+  return item * 2;
+});
+console.log(consume);
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -13,7 +18,21 @@
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(num1, num2) {
+  return num1 + num2;
+}
+console.log(add(2,2));
 
+// The product 
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+console.log(multiply(10,16));
+// greeting!
+function greeting(a, b, c, d) {
+  return a + b + c + d;
+}
+console.log(greeting(" Hello ", "Mary ", "Poppins ","nice to meet you!"))
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4

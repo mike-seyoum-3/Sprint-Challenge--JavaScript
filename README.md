@@ -56,9 +56,6 @@ Explicit binding we can explicitly tell Javascript engine to set point to certai
 new Binding this Keyword constructs a new objects, when a function is invoked as a constructor function using the new keyword word this points to the new object that's created.
 
 5. Why do we need super() in an extended class?
-
-The main reason we need super() is we can explicitly call a super constructor the argument less constructor (super()) will be called. This means you have to call a specific constructor yourself if there's no reachable argument-less constructor of the super class.
-
 Super() is an abstraction of creating the parent object. passes the attributes back up to the parent.
 
 ## Project Set up

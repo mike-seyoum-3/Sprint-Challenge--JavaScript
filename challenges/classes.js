@@ -1,6 +1,6 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 
-class cuboidMaker {
+class CuboidMaker {
 constructor(attributes) {
     this.length = attributes.length;
     this.width = attributes.width;
@@ -13,7 +13,7 @@ volume () {
 
 SurfaceArea () {
     return 2 * (this.length * this.width) * (this.length * this.height) * (this.width * this.height)
-}
+    }
 }
 const cuboidClass = new CuboidMaker ({ 
     length: 4,
@@ -35,11 +35,11 @@ class cuboidMaker {
     }
     
     volume () {
-        return this.length * this.width * this.height
+        return this.length * 3
     };
     
     SurfaceArea () {
-        return 2 * (this.length * this.width) * (this.length * this.height) * (this.width * this.height)
+        return this.length * 2
     }
     }
     const cuboidClass = new CuboidMaker ({ 

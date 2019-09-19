@@ -1,8 +1,8 @@
 // ==== Objects ====
 
-/* 
-  Given the following information about dinosaurs, create 3 objects: 
-  Use this pattern to create your objects: 
+/*
+  Given the following information about dinosaurs, create 3 objects:
+  Use this pattern to create your objects:
   object name, diet, weight, length, period
 */
 const tyra = {
@@ -38,7 +38,7 @@ const velo = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyra.weigh);
+console.log(tyra.weight);
 
 // What was the diet of a velociraptor?
 console.log(velo.diet);
@@ -84,7 +84,7 @@ console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
-The resulting contact information strings should have a space between the first name and the email, like this: 
+The resulting contact information strings should have a space between the first name and the email, like this:
 "Josh josh@example.com"
 
 Log the result of your new array. */
@@ -129,11 +129,10 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
-
-// zooAnimals.forEach(animal) => lowCaseAnimalNames.push(`Name: ${animal.animal_name}, Scientific: $ {animal.scientific_name}`)
-console.log(displayNames);
-
+const animalNames = [];
+zooAnimals.forEach(animal => animalNames.push(`Name: ${animal.animal_name}, Scientific: $
+{animal.scientific_name}`))
+console.log(animalNames);
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
@@ -143,15 +142,15 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 const lowCase = zooAnimals.map(animal => animal.animal_name.toLocaleLowerCase());
 console.log(lowCase);
 
-/* Request 3: .filter() 
+/* Request 3: .filter()
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const largerPopulation = zooAnimals.filter(animal => animal,population <5);
+const largerPopulation = zooAnimals.filter(animal => animal.population < 5 );
 console.log(largerPopulation);
 
-/* Request 4: .reduce() 
+/* Request 4: .reduce()
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
